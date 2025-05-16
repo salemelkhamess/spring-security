@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: spring-boot-app
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    buildFilter:
+      paths:
+        - Dockerfile
+    autoDeploy: true

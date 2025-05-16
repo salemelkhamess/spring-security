@@ -36,8 +36,8 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.
                 formLogin(fl->fl.loginPage("/login").permitAll())
-               // .authorizeHttpRequests(ar->ar.requestMatchers("/user/**").hasRole("USER"))
-                //.authorizeHttpRequests(ar->ar.requestMatchers("/admin/**" , "/delete/**").hasRole("ADMIN"))
+                .authorizeHttpRequests(ar->ar.requestMatchers("/user/**").hasRole("USER"))
+                .authorizeHttpRequests(ar->ar.requestMatchers("/admin/**" , "/delete/**").hasRole("ADMIN"))
                 .authorizeHttpRequests(ar->ar.requestMatchers("/public/**" ,"/webjars/**", "/css/**", "/js/**", "/images/**").permitAll())
                 .authorizeHttpRequests(ar->ar.anyRequest().authenticated())
                 .exceptionHandling(e->e.accessDeniedPage("/notAuthorized"))

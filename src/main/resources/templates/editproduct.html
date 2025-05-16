@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"   xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate ="layout"
+>
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div class="container" layout:fragment="content">
+  <div class="card">
+    <div class="card-header">
+      <h1>Edit product</h1>
+    </div>
+    <div class="card-body">
+      <form method="post" th:action="@{/admin/update}">
+        <!-- Hidden input to include the product ID -->
+        <input type="hidden" name="id" th:value="${product.id}" />
+
+        <div class="mt-4">
+          <label>Name</label>
+          <input type="text" name="name" class="form-control" th:value="${product.name}">
+        </div>
+
+        <div class="mt-4">
+          <label>Price</label>
+          <input type="number" name="price" class="form-control" th:value="${product.price}">
+        </div>
+
+        <div class="mt-4">
+          <label>Quantity</label>
+          <input type="number" name="quantity" class="form-control" th:value="${product.quantity}">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

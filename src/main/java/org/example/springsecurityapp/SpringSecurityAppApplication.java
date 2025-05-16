@@ -20,32 +20,18 @@ public class SpringSecurityAppApplication {
     @Bean
     public CommandLineRunner commandLineRunner(ProductRepository productRepository) {
         return args -> {
-            productRepository.save(
-                    Product.builder()
-                            .name("P1")
-                            .price(1000)
-                            .quantity(12)
-                            .build()
-            );
-
-            productRepository.save(
-                    Product.builder()
-                            .name("P2")
-                            .price(1200)
-                            .quantity(10)
-                            .build()
-            );
-
-            productRepository.save(
-                    Product.builder()
-                            .name("P3")
-                            .price(1030)
-                            .quantity(20)
-                            .build()
-            );
+            for (int i = 1; i <= 10000; i++) {
+                productRepository.save(
+                        Product.builder()
+                                .name("Product " + i)
+                                .price(1000 + i * 10)
+                                .quantity(10 + i)
+                                .build()
+                );
+            }
 
             productRepository.findAll().forEach(System.out::println);
         };
-
     }
+
 }
