@@ -1,0 +1,6 @@
+/home/salem/IdeaProjects/tp_staprk_ventes/tp4_spart/spring-security-app/src/main/java/org/example/springsecurityapp/SpringSecurityAppApplication.java
+/home/salem/IdeaProjects/tp_staprk_ventes/tp4_spart/spring-security-app/src/main/java/org/example/springsecurityapp/entities/Product.java
+/home/salem/IdeaProjects/tp_staprk_ventes/tp4_spart/spring-security-app/src/main/java/org/example/springsecurityapp/repository/ProductRepository.java
+/home/salem/IdeaProjects/tp_staprk_ventes/tp4_spart/spring-security-app/src/main/java/org/example/springsecurityapp/security/SecurityConfig.java
+/home/salem/IdeaProjects/tp_staprk_ventes/tp4_spart/spring-security-app/src/main/java/org/example/springsecurityapp/web/LoginController.java
+/home/salem/IdeaProjects/tp_staprk_ventes/tp4_spart/spring-security-app/src/main/java/org/example/springsecurityapp/web/ProductController.java

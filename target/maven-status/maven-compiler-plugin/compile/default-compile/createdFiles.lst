@@ -1,0 +1,7 @@
+org/example/springsecurityapp/web/LoginController.class
+org/example/springsecurityapp/web/ProductController.class
+org/example/springsecurityapp/entities/Product.class
+org/example/springsecurityapp/entities/Product$ProductBuilder.class
+org/example/springsecurityapp/security/SecurityConfig.class
+org/example/springsecurityapp/repository/ProductRepository.class
+org/example/springsecurityapp/SpringSecurityAppApplication.class
